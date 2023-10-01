@@ -1,0 +1,923 @@
+
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: whitesmoke;
+}
+
+.head-up {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+ 
+/* .logo */
+.logo img{
+    width: 5rem;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+/* .nav__link ul */
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+nav ul li a{
+    color: black;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid black;
+    opacity: 80%;
+}
+ 
+.log__in{
+    border: none;
+    background: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sing__up{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ---hamburger */
+.hamburger{
+    display: none;
+}
+.hamburger .bar{
+    background-color: blue;
+    width: 25px;
+    height: 3px;
+    display: block;
+    margin: 5px; 
+}
+
+@media (max-width: 900px){
+    header {
+        padding: 10px ;
+    }
+    .logo img {
+        width: 2.5rem;  
+    }
+    .logo h1{
+        font-size: 1rem;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg); 
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li a{
+        margin-bottom: 2rem;
+    }
+    nav{
+    flex-direction: column;
+    }
+
+    nav.active{
+        left:  0%;
+        top: 0%;
+    }
+    nav{
+        background-color: rgb(13, 13, 145);
+        width: 50%;
+        height: 100%;
+        position: fixed;
+        align-items: center;
+        padding: 5rem 0;
+        min-height: 200vh;
+        left:  -100%;
+        transition: 0.5s; 
+    }
+
+    .log__in{
+        padding: 10px;
+    }
+    
+    .sing__up{
+        padding: 10px;
+    }
+}
+
+/* main .hero */
+
+.hero {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.hero .hero__style{
+    width: 90%;
+    margin: auto;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./image/Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px; 
+    border-radius: 15px;
+}
+
+.hero .hero__style .note__style{
+    width: 50%;
+    padding: 50px 0;
+}
+.hero__style .note__style h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color:white;
+}
+.hero__style .note__style p{
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px){
+    .hero .hero__style{
+        padding: 0;
+    }
+
+    .hero .hero__style .note__style{
+        width: 100%;
+        padding: 80px 0 ;
+        
+    }
+
+      .hero .hero__style .note__style h1 {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+      }
+    
+    .hero__style .note__style p{
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        padding: 0 10px;
+    }
+}
+
+
+ 
+
+/* .search input and button */
+
+.search{
+    background-color: white;
+    position: absolute;
+    border-radius: 10px;
+    padding: 0 0 5px 10px 0 0;
+
+}
+
+.search input{
+    position: static;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: text;
+    border: 0;
+    outline: 0;
+}
+.search button{
+    background-color: blue;
+    padding: 15px 30px;
+    border-radius:0 5px 5px 0;
+    border: 0;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 900px){
+    .search {
+        margin-left: 0.5rem;
+        border-radius: 3px;
+        padding: 0 0 5px 5px 0 0;
+    }
+
+    .search input{
+        padding: 5px;
+    }
+
+    .search button{
+        padding: 5px;
+        border-radius:0 3px 3px 0;
+    }
+}
+
+
+/* my icons */
+.first{
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 2rem;
+}
+.first .container{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.first .container .icons{
+    display: flex;
+    align-items: center;
+}
+.first .container .icons svg{
+    color: blue;
+    border-radius: 50px;
+    width: 5rem;
+    box-shadow: 0px 5px 15px  rgb(238, 234, 222);
+}
+.icons div{
+     margin-left: 2rem; 
+}
+.icons div h1{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.icons div p{
+   font-size: 1.5rem;
+}
+
+@media (max-width: 900px){
+    .first{
+        padding: 0;
+    }
+    .first .container .icons svg{
+        width: 2rem;
+    }
+     
+    .icons div{
+        margin-left: 0; 
+   }
+    .icons div h1{
+        font-size: 0.5rem;
+
+    }
+    .icons div p{
+        font-size: 0.5rem;
+    }
+}
+
+
+/* .our__pop */
+
+.our__pop{
+    width:  100%;
+    padding:   100px 0;
+    
+}
+.our__pop .pop{
+    display:  flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0 ;
+}
+.our__pop .pop h2{
+    font-size: 2rem;
+    border-bottom: 2px solid blue;
+}
+.our__pop .pop button{
+    background: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+@media (max-width: 900px){
+     
+    .our__pop .pop{
+        padding: 0;
+    }
+    .our__pop .pop h2{
+        font-size: 1.2rem;
+
+    }
+    .our__pop .pop button{
+        text-transform: lowercase;
+        padding: 5px;
+    }
+}
+
+/* section .photo and .card */
+
+.move{
+    width: 100%;
+}
+ 
+ .photo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    width: 90%;
+    margin: auto;
+    top: 0;
+}
+.photo .card{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px  rgb(238, 234, 222);
+}
+ .photo .card img{
+    width: 100%;
+    border-radius: 10px  10px 0 0;  
+}
+ .card .star{
+    display: flex;  
+    border-bottom: 1px solid rgb(187, 185, 178);
+}
+ .card .star img{
+    width: 2rem;
+    margin-bottom: 1rem;
+}
+ .card .articles{
+    padding: 20px;
+    width: 100%; 
+}
+ .card .articles h2{
+    margin-bottom: 1rem;
+}
+ .card .icon{
+    display: flex;
+    justify-content: space-between;  
+}
+ .card .icon div{
+     align-items: center;
+    display: flex;
+}
+ .card .icon svg{
+    width: 2rem;
+    color: blue;
+}
+ .card .icon div span{
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 900px){
+
+    .photo{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+ 
+     .card .star img{
+        width: 1rem;
+        margin-bottom: 0.5rem;
+    }
+     .card .articles{
+        padding: 10px;
+    }
+     .card .articles h2{
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+     .card .icon svg{
+        width: 1.2rem;
+        color: blue;
+    }
+     .card .icon div span{
+        margin: 0.5rem;
+        font-size: 0.5rem;
+    }
+    
+}
+
+@media (max-width:450px) {
+
+    .photo{
+        display:block ;
+       margin-bottom: 2rem;
+    }
+    
+}
+
+ /* section  About */
+ .about{
+    padding: 100px 0;
+    width: 100%;
+ }
+ 
+
+ .find{
+    display: flex;
+    width: 90%;
+    gap: 2rem;
+    margin: auto;
+}
+ .find .makes img{
+    width: 100%;
+}
+ .find .makes h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid blue;
+}
+.find .makes p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+}
+.find .makes button{
+    cursor: pointer;
+    padding: 15px 30px;
+    border: 0;
+    border-radius:  5px;
+    background-color: blue;
+    color: white;
+}
+.find .makes img{
+    border-radius: 10px;
+    width: 100%;
+}
+ .find .makes{
+    width: 100%; 
+    margin: auto;   
+}
+
+.makes svg{
+    width: 60px;
+    position: absolute;
+    right: 20%; 
+    margin-top: 25%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px  rgb(238, 234, 222);
+    color: blue;
+}
+ 
+.makes  video{
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.makes video:focus{
+    outline: none;
+    border: none;
+}
+
+@media (max-width: 900px){
+    .find{
+        display: block;
+    }
+    .find .makes h2{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .find .makes p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+    .find .makes button{
+        padding: 10px;
+        margin-bottom: 1rem;
+        border: 0;
+    }
+    .makes svg{
+        width: 50px;
+        right: 35%; 
+        margin-top: 55%;
+        position: center;
+    }
+}
+
+/* section .room */
+#room{
+    width: 100%;
+}
+ 
+
+.flex{
+    display: flex;
+    width: 90%;
+    gap: 2rem;
+    margin: auto;
+    
+}
+.flex .circles{
+    width: 80%;
+}
+.flex .circles img{
+    width: 100%;
+    border-radius: 10px;
+}
+.flex .circles h3{
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+
+@media (max-width: 900px){
+    .flex{
+        display: block;
+    }
+    .flex .circles h3{
+        font-size: 1.5rem;
+    }
+    .flex .circles{
+        width: 100%; 
+    }
+    
+     
+}
+/* .circles .tempor p */
+
+.circles .tempor {
+    display: flex;
+    gap: 2rem;
+    padding: 20px 0;
+    align-items: center;
+}
+.circles .tempor img{
+    width: 15%;
+    border-radius: 50px;
+}
+.circles .tempor div h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+.circles .tempor div p{
+    font-size: 1.2rem;
+}
+
+.circles .lorem{
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 2.5rem;
+}
+ 
+.property .emmet{
+    display: flex;
+    justify-content: space-between;
+}
+.emmet .sector{
+    display: flex;
+}
+.emmet .sector svg{
+    width: 2rem;
+    color: #ffd700;
+    margin: 5px;
+}
+.emmet .sector .arrow svg{
+    color: blue;
+    width: 3rem;
+    cursor: pointer;
+}
+.emmet .sector .arrow span svg{
+    background-color: lightsteelblue;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px){
+
+    .circles .tempor {
+        gap: 1rem;
+        padding: 5px 0;  
+    }
+    .circles .tempor img{
+        width: 5rem;
+        border-radius: 50px;
+    }
+   
+    .circles .tempor div h4{
+        font-size: 1rem;
+    }
+    .circles .tempor div p{
+        font-size: 1rem;
+    }
+    .circles .lorem{
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 2.5rem;
+    }
+    .circles .lorem p{
+        margin-bottom: 1rem;
+        line-height: 2rem;
+    }
+    .emmet .sector svg{
+        margin: 0;
+    }
+    .emmet .sector .arrow svg{
+        width:2rem ;
+
+    }
+     
+
+}
+ 
+
+/* section rank and remove and blog */
+
+.rank{
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 50px 0;
+}
+.rank .remove{
+    width: 90%;
+    margin: auto;
+}
+.remove .blog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.blog div svg{
+    color: blue;
+    width: 3rem;
+    cursor: pointer;
+}
+.blog div span svg{
+    background-color: lightsteelblue;
+    border-radius: 5px;
+}
+.blog div h2{
+    font-size: 2rem;
+    border-bottom: 2px solid blue;
+}
+
+@media (max-width: 900px){
+    .blog div svg{
+         width: 2rem;
+    }
+    .blog div h2{
+        font-size: 1.5rem;
+    }
+}
+
+/* :left and :right .photo */
+
+.remove .left{
+    display: flex;
+    gap: 2rem;
+    padding: 50px 0;
+}
+.left .right{
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 5px 15px  rgb(238, 234, 222);
+}
+.left .right .note{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.left .right .note p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(145, 144, 138);
+}
+
+.left .right .note h3{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.left .right .note button{
+    border: none;
+    background-color: lightsteelblue;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.left .right .note button a{
+    color: blue;
+    
+}
+
+.left .right img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 900px){
+    .remove .left{
+       display: block;
+    }
+    .left .right{
+        margin-top: 2rem;
+    }
+
+    .left .right .note{
+        padding: 10px;
+    }
+    
+    .left .right .note h3{
+        font-size: 1rem;
+    }
+    .left .right .note button{
+        font-size: 1rem;
+        padding: 10px;
+        text-transform: lowercase;
+    }
+
+}
+
+/* section pattern and small */
+
+.parent{
+    width: 100%;
+    padding: 50px;
+    align-items: center;
+    
+}
+.parent .small{
+    text-align: center;
+}
+.small h2{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.small p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.parent .l{
+    width: 30%;
+    margin: auto;
+    margin-bottom: 5rem;
+    align-items: center;
+
+}
+
+.parent .btn{
+    box-shadow: 0px 5px 15px  rgb(155, 181, 218);
+    position: absolute;
+    border-radius: 10px;
+    
+}
+
+.parent .btn input{
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+.parent .btn button{
+    padding: 15px 30px;
+    border: 0;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+@media (max-width: 900px){
+
+    .parent .small{
+        width: 100%;
+    }
+    .small h2{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .small p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .parent .l{
+        width: 100%;
+        margin-bottom: 2rem;
+    
+    }
+    
+    .parent .btn input{ 
+        padding: 5px;   
+    }
+    .parent .btn button{
+        padding: 5px; 
+    }
+
+}
+
+/* footer */
+footer{
+    padding: 100px 0;
+    width: 100%;
+    background-color: whitesmoke;
+}
+.more .logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.more .logo img{
+    width: 5rem;
+}
+@media (max-width:900px) {
+
+    .more .logo{
+
+        margin-bottom: 0.5rem;
+    }
+
+    .more .logo img{
+        width: 2.5rem;
+        top: 0;
+    }
+
+    .more .logo h2{
+        font-size: 1.2rem;
+    }
+    
+}
+
+/* footer tell */
+
+footer .tell{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.tell .more h3{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.tell .more p{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+     color: rgb(145, 144, 138);
+}
+@media (max-width: 900px){
+    footer .tell{
+        display: block;
+    }
+}
+
+/* stay connected div */
+
+.more div img{
+    width: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.more div h4{
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: rgb(145, 144, 138);
+}
+
+.more div{
+    display: flex;
+    align-items: center;
+}
+
+
+ 
