@@ -285,6 +285,10 @@ nav ul li a:hover{
     .first{
         padding: 0;
     }
+    .first .container .icons{
+        gap: 0.1rem;
+    }
+    
     .first .container .icons svg{
         width: 2rem;
     }
